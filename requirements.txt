@@ -1,0 +1,9 @@
+sounddevice==0.4.4
+pyaudio==0.2.11
+python-levenshtein==0.12.2
+vosk==0.3.28
+pvporcupine==2.0.1
+numpy==1.24.1
+
+# python -m venv venv
+# pip install -r requirements.txt
