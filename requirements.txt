@@ -1,9 +1,12 @@
-sounddevice==0.4.4
-pyaudio==0.2.11
-python-levenshtein==0.12.2
-vosk==0.3.28
-pvporcupine==2.0.1
-numpy==1.24.1
+sounddevice
+pyaudio
+python-levenshtein
+vosk
+pvporcupine
+numpy
+pygame
 
-# python -m venv venv
+# python3 -m venv venv
+# source venv/bin/activate.fish
 # pip install -r requirements.txt
+# python3 vosc.py

@@ -41,7 +41,10 @@ def handle_command(command):
     
     """Обработка команд пользователя."""
     
-    
+    if "новый проект" in command:
+        command = command.replace("новый проект ", "")
+        newProject(command)
+
   
     if "найди мне" not in command and "открой браузер" in command:
         openingClosingB()
@@ -65,6 +68,17 @@ def handle_command(command):
 
     if "найди мне" in command:
         search(command.replace("найди мне", "").strip())
+    
+    if "завершение процесса" in command:
+        play_audio("audio/Есть.wav")
+        os._exit(0)
+    if "молодец" in command:
+        play_audio("audio/Всегда к вашим услугам сэр.wav")
+    
+    if "просмотр видео" in command:
+        play_audio("audio/down.wav")
+        youTube()
+
 
 if __name__ == "__main__":
     porcupine = pvporcupine.create(access_key="kdQ3MfqR0hE05kGYn0EfDD3B+dQj0Xk2jiXrszZqNLfEonDKgedBPA==", keyword_paths=["audio/jarvis.ppn"])
@@ -77,7 +91,6 @@ if __name__ == "__main__":
     
 
     porcupine.delete()
-
 
 
 # def handle_command(command):
@@ -114,19 +127,6 @@ if __name__ == "__main__":
 #             commands[closest_command]()
 #     else:
 #         print("Не распознана команда.")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

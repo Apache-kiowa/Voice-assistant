@@ -18,6 +18,7 @@ import numpy as np  # Для работы с числовыми массивам
 # --- Интерфейс и дополнительные функции ---
 import os           # Для работы с операционной системой (путь, директории и т.д.)
 import signal       # Для обработки сигналов завершения программы
+import sys
 
 import time         # Для работы с временем
 import threading    # Для работы с потоками
@@ -26,10 +27,11 @@ import asyncio      # Для работы с асинхронностью
 # МОИ МОДУЛИ
 from actionModules.openingClosingB import *   # Импорт из вашего модуля, работающего с браузером
 from actionModules.startVPN import startVPN  # Импорт функции для включения VPN
-# from actionModules.playSong import playSong  # Закомментированный импорт для музыки
+from actionModules.playSong import playSong  # Закомментированный импорт для музыки
 from actionModules.sistem import shutdown    # Импорт функции для выключения системы
 from actionModules.volume import volume      # Импорт функции для управления громкостью
-
+from actionModules.newProject import newProject 
+from actionModules.youTube import youTube
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 os.chdir(script_dir)
